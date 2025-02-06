@@ -7,11 +7,15 @@ All the original datasets can be downloaded from [GSE194122](https://www.ncbi.nl
 
 1. The proteomics translation for intra-datasets
 - Run with raw RNA and protein expression file
-'''python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result'''
+```Bash
+python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result
+```
 - Run with preprocessed RNA and protein expression file
-'''python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result --preprocessed True'''
+python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result --preprocessed True'''
 2. The proteomics translation across cell types
-'''python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result --preprocessed True --mode Mono'''
+'''Bash
+python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result --preprocessed True --mode Mono
+'''
 3. The proteomics translation across batches
 
 4. The proteomics translation across technologies
