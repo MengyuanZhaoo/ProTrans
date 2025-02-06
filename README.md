@@ -18,6 +18,7 @@ python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result --preproce
 ```Bash
 python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result --preprocessed True --mode Mono
 ```
+- Run with raw RNA and protein expression file
 3. The proteomics translation across batches
 
 4. The proteomics translation across technologies
