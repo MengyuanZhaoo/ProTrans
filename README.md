@@ -94,7 +94,7 @@ Run the command as follows:
 python ProTrans-technology.py --data_dir ../dataset/GSE200417 --out_dir ./result
 ```
 ## Extending ProTrans to tri-omics translation
-Taking GSM5123953 as example, users follow gen_atac.ipynb to convert the h5 file into atac.csv (cell*peak). Next, referring to atac2seq.ipynb to extract sequences corresponding to peaks, then follow seq2emb.ipynb to generate emb.npz used in translation process. 
+Taking GSM5123953 as example, users follow gen_atac.ipynb to convert the h5 file into atac.csv (cell*peak). Next, referring to atac2seq.ipynb to extract sequences corresponding to peaks, then follow seq2emb.ipynb to generate atac_emb.npz used in translation process. 
 
 the directory and specific instructions for input files are as follows:
 ```
