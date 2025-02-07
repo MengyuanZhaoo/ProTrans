@@ -95,7 +95,7 @@ if __name__ == '__main__':
     parser.add_argument('--patience', type=int, default=50)
     parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--transpose', type=bool, default=False)
-    parser.add_argument('--data_dir', type=str, default='../data/GSE200417')
+    parser.add_argument('--data_dir', type=str, default='../dataset/GSE200417')
     parser.add_argument('--out_dir', type=str, default='../result/GSE200417')
     args = parser.parse_args()
 
