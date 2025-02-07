@@ -139,7 +139,7 @@ if __name__ == '__main__':
     parser.add_argument('--preprocessed', type=bool, default=False)
     parser.add_argument('--transpose', type=bool, default=False)
     parser.add_argument('--attention', type=bool, default=False)
-    parser.add_argument('--data_dir', type=str, default='../data/GSE164378')
+    parser.add_argument('--data_dir', type=str, default='../dataset/GSE164378')
     parser.add_argument('--out_dir', type=str, default='../result/GSE164378')
     args = parser.parse_args()
 
