@@ -240,11 +240,6 @@ if __name__ == '__main__':
     # Load ATAC and Protein Data
     atac = pd.read_csv(args.data_dir+'/ATAC-ADT/atac.csv', sep = ',', header=0, index_col= 0 )  # (cell, peak)
     protein =  pd.read_csv(args.data_dir+'/ATAC-ADT/protein.csv', sep = ',', header=0, index_col= 0) # (cell, protein)
-    # align cell name for GSM4949911
-    new_index = []
-    for cell in np.array(atac.index):
-        new_index.append(cell.split('-')[0])
-    atac.index = new_index
     # filter peaks with chr
     atac = atac[[col for col in atac.columns if col.startswith('chr')]]
     # align cell number
