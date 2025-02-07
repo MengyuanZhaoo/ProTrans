@@ -251,7 +251,7 @@ if __name__ == '__main__':
         print('{} proteins for training, {} proteins for testing'.format(len(unselected), len(selected)), flush = True)
     elif args.mode.startswith('Batch'):
         print('Testing model on hold out batch...')
-        cell_annotation = pd.read_csv(args.data_dir + '/GSE164378_sc.meta.data_3P.csv', sep = ',', header=0, index_col= 0) # (cell, annotaion)
+        cell_annotation = pd.read_csv(args.data_dir + '/annotation.csv', sep = ',', header=0, index_col= 0) # (cell, annotaion)
         assert np.array_equal(cell_all, np.array(cell_annotation.index))
 
         # One batch hold out
@@ -273,7 +273,7 @@ if __name__ == '__main__':
                                         torch.tensor(cell_embedding_train_index, dtype=torch.int32))
     elif args.mode != '':
         print('Testing model on hold out cell type...')
-        cell_annotation = pd.read_csv(args.data_dir + '/GSE164378_sc.meta.data_3P.csv', sep = ',', header=0, index_col= 0) # (cell, annotaion)
+        cell_annotation = pd.read_csv(args.data_dir + '/annotation.csv', sep = ',', header=0, index_col= 0) # (cell, annotaion)
         assert np.array_equal(cell_all, np.array(cell_annotation.index))
 
         # One cell type hold out
