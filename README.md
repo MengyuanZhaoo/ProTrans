@@ -43,6 +43,16 @@ Setting mode as 'all', ProTrans will use all cells to train model.
 Setting mode as '', ProTrans will randomly divides all cells into training and test sets according to 6 to 4. 
 
 ## The proteomics translation for intra-datasets
+Taking GSE164378 as example, the directory and specific instructions for input files are as follows:
+```
+ |-- dataset
+        |-- GSE164378
+              |-- rna.csv           # (cell, gene)
+              |-- protein.csv       # (cell, protein)
+              |-- annotation.csv    # (cell, annotation)    
+```
+All output files will be saved in out_dir.
+
 - Run with raw RNA and protein expression file
 ```Bash
 python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result
@@ -59,10 +69,6 @@ python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result --preproce
 ```Bash
 python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result --preprocessed True --mode Batch1
 ```
-## The proteomics translation across technologies
-```Bash
-python ProTrans-technology.py --data_dir ../dataset/GSE200417 --out_dir ./result
-```
 ## The proteomics translation while saving gene-protein relationship
 ```Bash
 python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result --preprocessed True --mode all --attention True
@@ -71,3 +77,41 @@ python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result --preproce
 ```Bash
 python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result-zeroshot --preprocessed True --mode zeroshot
 ```
+## The proteomics translation across technologies
+Taking GSE200417 as example, the directory and specific instructions for input files are as follows:
+```
+ |-- dataset
+        |-- GSE200417
+            |-- CITE
+                |-- rna.csv          # (cell, gene)
+                |-- protein.csv      # (cell, protein)      
+            |-- DOGMA
+                |-- rna.csv          # (cell, gene)
+                |-- protein.csv      # (cell, protein)
+```
+Run the command as follows:
+```Bash
+python ProTrans-technology.py --data_dir ../dataset/GSE200417 --out_dir ./result
+```
+## Extending ProTrans to tri-omics translation
+Taking GSM5123953 as example, the directory and specific instructions for input files are as follows:
+```
+ |-- dataset
+        |-- GSM5123953
+            |-- ATAC-ADT
+                |-- atac.csv          # (cell, peak)
+                |-- protein.csv       # (cell, protein)      
+            |-- ATAC-RNA
+                |-- atac.csv          # (cell, peak)
+                |-- rna.csv           # (cell, protein)
+```
+- The proteomics translation based on epigenomics
+```Bash
+python ProTrans-ATAC-ADT.py --data_dir ../dataset/GSM5123953 --out_dir ./result
+```
+
+- The transcriptomics translation based on epigenomics
+```Bash
+python ProTrans-ATAC-RNA.py --data_dir ../dataset/GSM5123953 --out_dir ./result
+```
+
