@@ -122,10 +122,10 @@ if __name__ == '__main__':
     criterion = nn.MSELoss()
 
     # Load train and test RNA Data
-    mrna_train = pd.read_csv(args.data_dir+'/CITE/GSM6032900_RNA.csv', sep = ',', header=0, index_col= 0 ).T  # (cell, gene)
-    protein_train =  pd.read_csv(args.data_dir+'/CITE/GSM6032900_ADT.csv', sep = ',', header=0, index_col= 0).T # (cell, protein)
-    mrna_test = pd.read_csv(args.data_dir+'/DOGMA/GSM6032897_DOGMA_RNA.csv', sep = ',', header=0, index_col= 0 ).T  # (cell, gene)
-    protein_test =  pd.read_csv(args.data_dir+'/DOGMA/GSM6032894_DOGMA_ADT.csv', sep = ',', header=0, index_col= 0).T # (cell, protein)
+    mrna_train = pd.read_csv(args.data_dir+'/CITE/rna.csv', sep = ',', header=0, index_col= 0 )  # (cell, gene)
+    protein_train =  pd.read_csv(args.data_dir+'/CITE/protein.csv', sep = ',', header=0, index_col= 0) # (cell, protein)
+    mrna_test = pd.read_csv(args.data_dir+'/DOGMA/rna.csv', sep = ',', header=0, index_col= 0 )  # (cell, gene)
+    protein_test =  pd.read_csv(args.data_dir+'/DOGMA/protein.csv', sep = ',', header=0, index_col= 0) # (cell, protein)
     proteins = []
     for col in protein_test.columns:
         proteins.append(col[:col.rfind('-')])
