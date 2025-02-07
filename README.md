@@ -42,8 +42,7 @@ Setting mode as 'zeroshot', ProTrans will randomly divides all proteins into tra
 Setting mode as 'all', ProTrans will use all cells to train model.
 Setting mode as '', ProTrans will randomly divides all cells into training and test sets according to 6 to 4. 
 
-## The proteomics translation for intra-datasets
-Taking GSE164378 as example, the directory and specific instructions for input files are as follows:
+Users need to provide rna.csv and protein.csv of raw expression reads to train or evaluate ProTrans. The annotation file is optional which is used to enable omics translation across cell types or batches. Taking GSE164378 as example, the directory and specific instructions for input files are as follows:
 ```
  |-- dataset
         |-- GSE164378
@@ -53,6 +52,7 @@ Taking GSE164378 as example, the directory and specific instructions for input f
 ```
 All output files will be saved in out_dir.
 
+## The proteomics translation for intra-datasets
 - Run with raw RNA and protein expression file
 ```Bash
 python ProTrans.py --data_dir ../dataset/GSE164378 --out_dir ./result
@@ -94,7 +94,7 @@ Run the command as follows:
 python ProTrans-technology.py --data_dir ../dataset/GSE200417 --out_dir ./result
 ```
 ## Extending ProTrans to tri-omics translation
-Taking GSM5123953 as example, users follow gen_atac.ipynb to convert the h5 file into atac.csv (cell*peak). Next, referring to atac2seq.ipynb to extract sequences corresponding to peaks, then follow seq2emb.ipynb to generate atac_emb.npz used in translation process. 
+Taking GSM5123953 as example, users follow gen_atac.ipynb to convert the h5 file into atac.csv (cell*peak). Next, referring to atac2seq.ipynb to extract sequences corresponding to peaks, then follow seq2emb.ipynb to generate atac_emb.npz used in translation process. In addition, users need to unzip dataset/dna2vec/pre-trained DNA-8mers.7z to pre-trained DNA-8mers.txt.
 
 the directory and specific instructions for input files are as follows:
 ```
