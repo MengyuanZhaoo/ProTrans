@@ -19,7 +19,7 @@ torch==2.0.0
 ```
 
 # Datasets
-All the original datasets can be downloaded from [GSE194122](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE194122), [GSE100866](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE100866), [GSE164378](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE164378), [GSE128639](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128639), [GSE156473](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156473), [GSE200417](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200417), [GSE158013](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158013), [GSE96583](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96583).
+All the original datasets can be downloaded from [GSE194122](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE194122), [GSE100866](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE100866), [GSE164378](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE164378), [GSE128639](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128639), [GSE156473](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156473), [GSE200417](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200417), [GSE158013](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158013), [GSE96583](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96583). We have released the pretrained gene and protein sequence embeddings with [link1](https://drive.google.com/file/d/1LbC_xtLxgTd3cqdjKmJkzDIhW1GDaUqP/view?usp=sharing) and [link2](https://drive.google.com/file/d/1KgDbkDumm-nAA4SADiOCTz0JVWlpaxtx/view?usp=sharing).
 
 # Usage
 
