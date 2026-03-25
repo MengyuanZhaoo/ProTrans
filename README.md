@@ -119,4 +119,6 @@ python ProTrans-ATAC-ADT.py --data_dir ../dataset/GSM5123953 --out_dir ./result
 ```Bash
 python ProTrans-ATAC-RNA.py --data_dir ../dataset/GSM5123953 --out_dir ./result
 ```
+## License
+This project is licensed under the MIT License.
 
